@@ -3,4 +3,5 @@ name: varnish
 
 dependencies: []
 
-files: []
+files:
+- varnish/varnish-6.0.3.tgz

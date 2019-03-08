@@ -1,1 +1,7 @@
-name: varnish-boshrelease
+---
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/varnish-boshrelease
+
+final_name: varnish
