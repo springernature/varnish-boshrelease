@@ -1,0 +1,8 @@
+---
+name: varnish
+
+templates: {}
+
+packages: []
+
+properties: {}
