@@ -1,1 +1,12 @@
 set -e
+
+VARNISH_VERSION=6.0.3
+
+mkdir ${BOSH_INSTALL_TARGET}/bin
+
+tar xzf varnish/varnish-${VARNISH_VERSION}.tgz
+pushd varnish-${VARNISH_VERSION}
+  sh autogen.sh
+  sh configure --prefix=${BOSH_INSTALL_TARGET}
+  make
+popd
