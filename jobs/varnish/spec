@@ -4,6 +4,7 @@ name: varnish
 templates:
   bpm.yml.erb: config/bpm.yml
 
-packages: []
+packages:
+  - varnish
 
 properties: {}
