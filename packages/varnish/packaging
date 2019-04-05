@@ -2,10 +2,23 @@ set -e
 
 VARNISH_VERSION=6.0.3
 
+export PACKAGES=/var/vcap/packages
+
+addBuildTool(){
+  export PATH=$PACKAGES/$1/bin:$PATH
+}
+
+setDeps() {
+  addBuildTool automake
+  addBuildTool autoconf
+}
+
 mkdir ${BOSH_INSTALL_TARGET}/bin
 
 tar xzf varnish/varnish-${VARNISH_VERSION}.tgz
 pushd varnish-${VARNISH_VERSION}
+
+  setDeps
   sh autogen.sh
   sh configure --prefix=${BOSH_INSTALL_TARGET}
   make
