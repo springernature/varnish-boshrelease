@@ -9,9 +9,11 @@ addBuildTool(){
 }
 
 setDeps() {
-  addBuildTool automake
-  addBuildTool autoconf
   addBuildTool libtool
+  addBuildTool automake
+  addBuildTool pkg-config
+  addBuildTool autoconf
+  export AL_OPTS="-I/${PACKAGES}/pkg-config/share/aclocal"
 }
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
