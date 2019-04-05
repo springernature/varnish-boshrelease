@@ -15,7 +15,7 @@ setDeps() {
   addBuildTool libtool
   addBuildTool pkg-config
 
-  export AL_OPTS="-I/${PACKAGES}/pkg-config/share/aclocal"
+  export AL_OPTS="${AL_OPTS} -I${PACKAGES}/pkg-config/share/aclocal"
 }
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
