@@ -7,6 +7,6 @@ tar xzf "pcre/pcre-${version}.tar.gz"
 
 cd "pcre-${version}"
 
-pcre_dir="${BOSH_INSTALL_TARGET}/share/pcre" ./configure "--prefix=${BOSH_INSTALL_TARGET}"
+./configure "--prefix=${BOSH_INSTALL_TARGET}"
 make
 make install "prefix=${BOSH_INSTALL_TARGET}"
