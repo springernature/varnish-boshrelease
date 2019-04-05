@@ -1,7 +1,8 @@
 ---
 name: varnish
 
-dependencies: []
+dependencies:
+- automake
 
 files:
 - varnish/varnish-6.0.3.tgz
