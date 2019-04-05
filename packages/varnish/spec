@@ -3,6 +3,7 @@ name: varnish
 
 dependencies:
 - automake
+- libtool
 
 files:
 - varnish/varnish-6.0.3.tgz

@@ -11,6 +11,7 @@ addBuildTool(){
 setDeps() {
   addBuildTool automake
   addBuildTool autoconf
+  addBuildTool libtool
 }
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
