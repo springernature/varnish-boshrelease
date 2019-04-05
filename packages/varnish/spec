@@ -7,6 +7,7 @@ dependencies:
 - libtool
 - pkg-config
 - pcre
+- zlib
 
 files:
 - varnish/varnish-6.0.3.tgz
