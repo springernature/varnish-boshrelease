@@ -6,13 +6,15 @@ export PACKAGES=/var/vcap/packages
 
 addBuildTool(){
   export PATH=$PACKAGES/$1/bin:$PATH
+  export AL_OPTS="${AL_OPTS} -I${PACKAGES}/$1"
 }
 
 setDeps() {
-  addBuildTool libtool
-  addBuildTool automake
-  addBuildTool pkg-config
   addBuildTool autoconf
+  addBuildTool automake
+  addBuildTool libtool
+  addBuildTool pkg-config
+
   export AL_OPTS="-I/${PACKAGES}/pkg-config/share/aclocal"
 }
 

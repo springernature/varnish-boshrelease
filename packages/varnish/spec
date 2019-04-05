@@ -3,6 +3,7 @@ name: varnish
 
 dependencies:
 - automake
+- autoconf
 - libtool
 - pkg-config
 - pcre
