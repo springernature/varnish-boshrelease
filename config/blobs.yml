@@ -7,6 +7,9 @@ automake/automake-1.15.tar.gz:
 libtool/libtool-2.4.6.tar.gz:
   size: 1806697
   sha: 25b6931265230a06f0fc2146df64c04e5ae6ec33
+pkg-config/pkg-config-0.29.tar.gz:
+  size: 1973875
+  sha: f4b19d203b3896a4293af4b62c7f908063c88a5a
 varnish/varnish-6.0.3.tgz:
   size: 3127712
   sha: 32872ed0c6ca4881d76599af96b22bbd971690ac
