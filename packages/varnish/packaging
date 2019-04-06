@@ -24,7 +24,7 @@ setDeps() {
 
   addLib zlib
 
-  export AL_OPTS="-I${PACKAGES}/pkg-config/share/aclocal ${AL_OPTS}"
+  export ACLOCAL_PATH="${PACKAGES}/pkg-config/share/aclocal"
 }
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
