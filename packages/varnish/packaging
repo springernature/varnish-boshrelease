@@ -35,6 +35,13 @@ pip install docutils sphinx
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
 
+tar xjf varnish/jemalloc-5.2.0.tar.bz2
+pushd jemalloc-5.2.0
+  sh ./configure --prefix=${BOSH_INSTALL_TARGET}
+  make
+  make install
+popd
+
 tar xzf varnish/varnish-${VARNISH_VERSION}.tgz
 pushd varnish-${VARNISH_VERSION}
 
