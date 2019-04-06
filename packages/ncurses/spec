@@ -1,0 +1,7 @@
+---
+name: ncurses
+
+dependencies: []
+
+files:
+- ncurses/ncurses-6.1.tar.gz

@@ -7,6 +7,9 @@ automake/automake-1.15.tar.gz:
 libtool/libtool-2.4.6.tar.gz:
   size: 1806697
   sha: 25b6931265230a06f0fc2146df64c04e5ae6ec33
+ncurses/ncurses-6.1.tar.gz:
+  size: 3365395
+  sha: 57acf6bc24cacd651d82541929f726f4def780cc
 pcre/pcre-8.43.tar.gz:
   size: 2085854
   sha: 8f36ed69d3e938972fc511c19bfaa0ff27ff1d71
