@@ -27,6 +27,9 @@ setDeps() {
   export ACLOCAL_PATH="${PACKAGES}/pkg-config/share/aclocal"
 }
 
+source /var/vcap/packages/python-2.7/bosh/compile.env
+pip install docutils sphinx
+
 mkdir ${BOSH_INSTALL_TARGET}/bin
 
 tar xzf varnish/varnish-${VARNISH_VERSION}.tgz
