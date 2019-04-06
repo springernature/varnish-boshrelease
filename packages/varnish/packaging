@@ -23,6 +23,7 @@ setDeps() {
   addBuildTool pkg-config
 
   addLib zlib
+  addLib pcre
 
   export ACLOCAL_PATH="${PACKAGES}/pkg-config/share/aclocal"
 }
