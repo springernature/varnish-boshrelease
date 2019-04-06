@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+version="5.2.0"
+
+tar xjf "jemalloc/jemalloc-${version}.tar.bz2"
+
+cd "jemalloc-${version}"
+
+./configure "--prefix=${BOSH_INSTALL_TARGET}"
+make
+make install "prefix=${BOSH_INSTALL_TARGET}"

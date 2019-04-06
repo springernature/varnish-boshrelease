@@ -4,6 +4,7 @@ name: varnish
 dependencies:
 - automake
 - autoconf
+- jemalloc
 - libedit
 - libtool
 - ncurses
@@ -13,5 +14,4 @@ dependencies:
 - zlib
 
 files:
-- varnish/jemalloc-5.2.0.tar.bz2
 - varnish/varnish-6.0.3.tgz
