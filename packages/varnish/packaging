@@ -24,6 +24,7 @@ setDeps() {
 
   addLib zlib
   addLib pcre
+  addLib ncurses
 
   export ACLOCAL_PATH="${PACKAGES}/pkg-config/share/aclocal"
 }

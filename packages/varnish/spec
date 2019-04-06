@@ -5,6 +5,7 @@ dependencies:
 - automake
 - autoconf
 - libtool
+- ncurses
 - pkg-config
 - pcre
 - python-2.7
