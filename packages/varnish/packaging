@@ -41,4 +41,5 @@ pushd varnish-${VARNISH_VERSION}
   sh autogen.sh
   sh configure --prefix=${BOSH_INSTALL_TARGET}
   make
+  make install
 popd
