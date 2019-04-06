@@ -5,6 +5,8 @@ templates:
   bpm.yml.erb: config/bpm.yml
 
 packages:
+  - jemalloc
+  - pcre
   - varnish
 
 properties: {}

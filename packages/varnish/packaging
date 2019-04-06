@@ -45,5 +45,3 @@ pushd varnish-${VARNISH_VERSION}
   make
   make install
 popd
-
-cp "${PACKAGES}/pcre/lib/libpcre.so.1" "${BOSH_INSTALL_TARGET}"/lib/
