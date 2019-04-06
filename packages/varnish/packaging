@@ -22,7 +22,6 @@ setDeps() {
   addBuildTool libtool
   addBuildTool pkg-config
 
-  addLib zlib
   addLib jemalloc
   addLib libedit
   addLib pcre
