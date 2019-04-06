@@ -1,0 +1,7 @@
+---
+name: libedit
+
+dependencies: []
+
+files:
+- libedit/libedit-20190324-3.1.tar.gz
