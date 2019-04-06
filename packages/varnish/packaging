@@ -23,6 +23,7 @@ setDeps() {
   addBuildTool pkg-config
 
   addLib zlib
+  addLib libedit
   addLib pcre
   addLib ncurses
 

@@ -4,6 +4,7 @@ name: varnish
 dependencies:
 - automake
 - autoconf
+- libedit
 - libtool
 - ncurses
 - pkg-config
