@@ -10,3 +10,4 @@ cd "jemalloc-${version}"
 ./configure "--prefix=${BOSH_INSTALL_TARGET}"
 make
 make install "prefix=${BOSH_INSTALL_TARGET}"
+ldconfig "${BOSH_INSTALL_TARGET}/lib"
