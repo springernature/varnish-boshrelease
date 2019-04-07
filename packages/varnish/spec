@@ -8,8 +8,8 @@ dependencies:
 - libedit
 - libtool
 - ncurses
-- pkg-config
 - pcre
+- pkg-config
 - python-2.7
 
 files:
