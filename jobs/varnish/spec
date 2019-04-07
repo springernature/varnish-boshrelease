@@ -3,6 +3,7 @@ name: varnish
 
 templates:
   bpm.yml.erb: config/bpm.yml
+  pre-start.erb: bin/pre-start
 
 packages:
   - jemalloc
