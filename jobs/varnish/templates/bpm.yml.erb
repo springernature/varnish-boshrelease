@@ -1,3 +1,9 @@
 processes:
   - name: varnish
-    executable: /var/vcap/jobs/varnish/sbin/varnishd
+    executable: /var/vcap/packages/varnish/sbin/varnishd
+
+    limits:
+      open_files: 131072
+
+    capabilities:
+      - NET_BIND_SERVICE

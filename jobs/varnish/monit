@@ -1,5 +1,5 @@
 check process varnish
-  with pidfile /var/vcap/sys/run/bpm/varnish/varnishd.pid
+  with pidfile /var/vcap/sys/run/bpm/varnish/varnish.pid
   start program "/var/vcap/jobs/bpm/bin/bpm start varnish"
   stop program "/var/vcap/jobs/bpm/bin/bpm stop varnish"
   group vcap
