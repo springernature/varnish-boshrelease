@@ -1,9 +1,19 @@
 processes:
-  - name: varnish
-    executable: /var/vcap/packages/varnish/sbin/varnishd
+- name: varnish
+  executable: /var/vcap/packages/varnish/sbin/varnishd
+  args:
+  - -b
+  - www.example.org
+  - -n
+  - /var/vcap/data/varnish/work
 
-    limits:
-      open_files: 131072
+  additional_volumes:
+  - path: /var/vcap/data/varnish/work
+    writable: true
+    allow_executions: true
 
-    capabilities:
-      - NET_BIND_SERVICE
+  limits:
+    open_files: 131072
+
+  capabilities:
+  - NET_BIND_SERVICE
