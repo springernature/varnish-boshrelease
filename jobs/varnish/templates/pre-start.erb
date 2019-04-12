@@ -1,3 +1,4 @@
 #!/bin/sh
 
-ldconfig /var/vcap/packages/jemalloc/lib
+echo /var/vcap/packages/jemalloc/lib > /etc/ld.so.conf.d/jemalloc.conf
+ldconfig

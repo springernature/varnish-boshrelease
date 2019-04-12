@@ -27,6 +27,7 @@ setDeps() {
   addLib ncurses
   addLib pcre
 
+  export LD_LIBRARY_PATH="${PACKAGES}/jemalloc/lib:${LD_LIBRARY_PATH}"
   export ACLOCAL_PATH="${PACKAGES}/pkg-config/share/aclocal"
 }
 
