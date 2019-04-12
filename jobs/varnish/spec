@@ -3,6 +3,7 @@ name: varnish
 
 templates:
   bpm.yml.erb: config/bpm.yml
+  varnish_wrapper: bin/varnish_wrapper
   pre-start.erb: bin/pre-start
 
 packages:
