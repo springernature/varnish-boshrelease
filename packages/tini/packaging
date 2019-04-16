@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+version="0.18.0"
+
+tar xzf "tini/tini-${version}.tar.gz"
+
+cd "tini-${version}"
+
+export CFLAGS="-DPR_SET_CHILD_SUBREAPER=36 -DPR_GET_CHILD_SUBREAPER=37"
+cmake . && make
+
+mkdir -p "${BOSH_INSTALL_TARGET}/bin/"
+mv tini "${BOSH_INSTALL_TARGET}/bin/"
