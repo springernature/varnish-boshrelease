@@ -1,6 +1,9 @@
 processes:
 - name: varnish
-  executable: /var/vcap/jobs/varnish/bin/varnish_wrapper
+  executable: /var/vcap/packages/tini/bin/tini
+  args:
+  - --
+  - /var/vcap/jobs/varnish/bin/varnish_wrapper
   additional_volumes:
   - path: /var/vcap/data/varnish/workdir
     writable: true
