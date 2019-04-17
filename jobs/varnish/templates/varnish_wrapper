@@ -1,5 +1,3 @@
 #!/bin/bash
 
-/var/vcap/packages/varnish/sbin/varnishd -a :8080 -b www.example.com -n /var/vcap/data/varnish/workdir
-
-sleep infinity
+/var/vcap/packages/varnish/sbin/varnishd -F -a :80 -b www.example.com -n /var/vcap/data/varnish/workdir
