@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/var/vcap/packages/varnish/sbin/varnishd -F -a <%= p('listen_address') %> -b www.example.com -n /var/vcap/data/varnish/workdir

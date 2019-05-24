@@ -3,7 +3,7 @@ name: varnish
 
 templates:
   bpm.yml.erb: config/bpm.yml
-  varnish_wrapper: bin/varnish_wrapper
+  varnish_wrapper.erb: bin/varnish_wrapper
   pre-start.erb: bin/pre-start
 
 packages:
@@ -12,4 +12,7 @@ packages:
   - tini
   - varnish
 
-properties: {}
+properties:
+  listen_address:
+    description: "Defines what address Varnish should listen to, and service HTTP requests from."
+    default: ":80"
