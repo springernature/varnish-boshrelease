@@ -16,3 +16,12 @@ properties:
   listen_address:
     description: "Defines what address Varnish should listen to, and service HTTP requests from."
     default: ":80"
+  parameters:
+    description: "Set parameters passed to varnishd as '-p <name=value>'. This option can be used multiple times to specify multiple parameters."
+    default: []
+    example:
+      parameters:
+        - name: default_ttl
+          value: 0
+        - name: nuke_limit
+          value: 500
