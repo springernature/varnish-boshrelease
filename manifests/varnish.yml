@@ -23,6 +23,9 @@ instance_groups:
         value: 0
       - name: nuke_limit
         value: 1000
+      storage:
+      - type: malloc
+        options: 1G
 
 update:
   canaries: 1

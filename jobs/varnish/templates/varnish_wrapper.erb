@@ -4,4 +4,8 @@
 <% p('parameters').each do |parameter| -%>
   -p <%= parameter["name"] %>=<%= parameter["value"] %> \
 <% end -%>
+<% p('storage').each do |s| -%>
+  -s <% unless s["name"].nil? -%><%= s["name"] %>=<% end -%><%= s["type"] -%>
+     <%- unless s["options"].nil? -%>,<%= s["options"] %><% end %> \
+<% end -%>
   -n /var/vcap/data/varnish/workdir
