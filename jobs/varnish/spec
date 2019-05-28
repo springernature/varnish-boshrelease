@@ -5,6 +5,7 @@ templates:
   bpm.yml.erb: config/bpm.yml
   varnish_wrapper.erb: bin/varnish_wrapper
   pre-start.erb: bin/pre-start
+  default.vcl.erb: etc/default.vcl
 
 packages:
   - jemalloc
@@ -16,6 +17,17 @@ properties:
   listen_address:
     description: "Defines what address Varnish should listen to, and service HTTP requests from."
     default: ":80"
+  vcl_configuration:
+    description: "Content of VCL configuration file"
+    default: []
+    example:
+      vcl_configuration: |
+        vcl 4.1;
+        backend default {
+          .host = "www.example.org";
+          .port = "80";
+        }
+
   storage:
     description: "Defines storage backend(s): '-s <[name=]type[,options]>'"
     default: []

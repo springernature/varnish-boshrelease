@@ -18,6 +18,13 @@ instance_groups:
   - name: varnish
     release: varnish
     properties:
+      vcl_configuration: |
+        vcl 4.1;
+        backend default {
+          .host = "www.example.org";
+          .port = "80";
+        }
+
       parameters:
       - name: default_ttl
         value: 0

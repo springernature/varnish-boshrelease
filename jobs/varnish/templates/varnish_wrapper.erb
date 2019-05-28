@@ -1,6 +1,7 @@
 #!/bin/bash
 
-/var/vcap/packages/varnish/sbin/varnishd -F -a <%= p('listen_address') %> -b www.example.com \
+/var/vcap/packages/varnish/sbin/varnishd -F -a <%= p('listen_address') %> \
+-f /var/vcap/jobs/varnish/etc/default.vcl \
 <% p('parameters').each do |parameter| -%>
   -p <%= parameter["name"] %>=<%= parameter["value"] %> \
 <% end -%>
