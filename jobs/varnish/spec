@@ -2,10 +2,10 @@
 name: varnish
 
 templates:
-  bpm.yml.erb: config/bpm.yml
-  varnish_wrapper.erb: bin/varnish_wrapper
-  pre-start: bin/pre-start
+  bpm.yml: config/bpm.yml
   default.vcl.erb: etc/default.vcl
+  pre-start: bin/pre-start
+  varnish_wrapper.erb: bin/varnish_wrapper
 
 packages:
   - jemalloc
