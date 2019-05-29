@@ -4,7 +4,7 @@ name: varnish
 templates:
   bpm.yml.erb: config/bpm.yml
   varnish_wrapper.erb: bin/varnish_wrapper
-  pre-start.erb: bin/pre-start
+  pre-start: bin/pre-start
   default.vcl.erb: etc/default.vcl
 
 packages:
