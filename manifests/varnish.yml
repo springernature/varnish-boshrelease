@@ -13,7 +13,8 @@ instance_groups:
   instances: 1
   vm_type: default
   stemcell: default
-  networks: [{name: default}]
+  networks:
+  - name: default
   jobs:
   - name: varnish
     release: varnish
