@@ -10,7 +10,6 @@ templates:
 packages:
   - jemalloc
   - pcre
-  - tini
   - varnish
 
 properties:
