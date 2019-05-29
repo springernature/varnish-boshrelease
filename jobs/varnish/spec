@@ -12,6 +12,10 @@ packages:
   - pcre
   - varnish
 
+provides:
+  - name: http-accelerator
+    type: http-router
+
 properties:
   listen_address:
     description: "Defines what address Varnish should listen to, and service HTTP requests from."
