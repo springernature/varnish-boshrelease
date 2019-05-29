@@ -13,7 +13,7 @@ packages:
   - varnish
 
 provides:
-  - name: http-accelerator
+  - name: http_accelerator
     type: http-router
 
 properties:
