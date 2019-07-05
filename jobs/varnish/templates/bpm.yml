@@ -2,7 +2,7 @@ processes:
 - name: varnish
   executable: /var/vcap/jobs/varnish/bin/varnish_wrapper
   additional_volumes:
-  - path: /var/vcap/data/varnish/workdir
+  - path: /var/vcap/data/varnish/<%= spec.id %>
     writable: true
     allow_executions: true
   limits:

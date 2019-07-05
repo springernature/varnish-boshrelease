@@ -1,7 +1,7 @@
 set -e
 
 VARNISH_VERSION=6.0.3
-VARNISH_WORKDIR="/var/vcap/data/varnish/workdir"
+LOCAL_STATE_DIR="/var/vcap/data"
 
 export PACKAGES=/var/vcap/packages
 
@@ -42,7 +42,7 @@ pushd varnish-${VARNISH_VERSION}
 
   setDeps
   sh autogen.sh
-  sh configure --prefix=${BOSH_INSTALL_TARGET} --localstatedir=${VARNISH_WORKDIR}
+  sh configure --prefix=${BOSH_INSTALL_TARGET} --localstatedir=${LOCAL_STATE_DIR}
   make
   make install
 popd
