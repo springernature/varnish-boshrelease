@@ -4,10 +4,8 @@ set -e
 
 DAEMON="/var/vcap/packages/varnish/sbin/varnishd"
 VCL_FILE="/var/vcap/jobs/varnish/etc/default.vcl"
-WORKDIR="/var/vcap/data/varnish/workdir"
 
 "${DAEMON}" -F -a <%= p('listen_address') %> \
-  -f "${VCL_FILE}" \
 <% p('parameters').each do |parameter| -%>
   -p <%= parameter["name"] %>=<%= parameter["value"] %> \
 <% end -%>
@@ -15,4 +13,4 @@ WORKDIR="/var/vcap/data/varnish/workdir"
   -s <% unless s["name"].nil? -%><%= s["name"] %>=<% end -%><%= s["type"] -%>
      <%- unless s["options"].nil? -%>,<%= s["options"] %><% end %> \
 <% end -%>
-  -n "${WORKDIR}"
+  -f "${VCL_FILE}"

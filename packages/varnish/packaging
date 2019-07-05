@@ -1,6 +1,7 @@
 set -e
 
 VARNISH_VERSION=6.0.3
+VARNISH_WORKDIR="/var/vcap/data/varnish/workdir"
 
 export PACKAGES=/var/vcap/packages
 
@@ -32,7 +33,7 @@ setDeps() {
 }
 
 source /var/vcap/packages/python-2.7/bosh/compile.env
-pip install docutils sphinx
+pip install docutils sphinx==1.8.5
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
 
@@ -41,7 +42,7 @@ pushd varnish-${VARNISH_VERSION}
 
   setDeps
   sh autogen.sh
-  sh configure --prefix=${BOSH_INSTALL_TARGET}
+  sh configure --prefix=${BOSH_INSTALL_TARGET} --localstatedir=${VARNISH_WORKDIR}
   make
   make install
 popd
