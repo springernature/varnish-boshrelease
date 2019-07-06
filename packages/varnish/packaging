@@ -1,7 +1,7 @@
 set -e
 
 VARNISH_VERSION=6.0.3
-LOCAL_STATE_DIR="/var/vcap/data"
+LOCAL_STATE_DIR="/var/vcap/data/varnish/workdir"
 
 export PACKAGES=/var/vcap/packages
 
