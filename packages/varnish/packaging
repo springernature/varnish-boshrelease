@@ -1,6 +1,9 @@
+#!/usr/bin/env bash
 set -e
 
 VARNISH_VERSION=6.0.3
+VARNISH_MODULES_VERSION=0.15.0
+
 LOCAL_STATE_DIR="/var/vcap/data/varnish/workdir"
 
 export PACKAGES=/var/vcap/packages
@@ -39,10 +42,19 @@ mkdir ${BOSH_INSTALL_TARGET}/bin
 
 tar xzf varnish/varnish-${VARNISH_VERSION}.tgz
 pushd varnish-${VARNISH_VERSION}
-
   setDeps
   sh autogen.sh
   sh configure --prefix=${BOSH_INSTALL_TARGET} --localstatedir=${LOCAL_STATE_DIR}
+  make
+  make install
+popd
+
+tar xzf varnish/varnish-modules-${VARNISH_MODULES_VERSION}.tar.gz
+pushd varnish-modules-${VARNISH_MODULES_VERSION}
+  setDeps
+  addLib varnish
+  sh bootstrap
+  sh configure --prefix=${BOSH_INSTALL_TARGET}
   make
   make install
 popd

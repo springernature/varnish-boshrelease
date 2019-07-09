@@ -25,3 +25,6 @@ pkg-config/pkg-config-0.29.tar.gz:
 varnish/varnish-6.0.3.tgz:
   size: 3127712
   sha: 32872ed0c6ca4881d76599af96b22bbd971690ac
+varnish/varnish-modules-0.15.0.tar.gz:
+  size: 65721
+  sha: fd88bb7410481a467f9abc2beaaf2b6679ac8867
