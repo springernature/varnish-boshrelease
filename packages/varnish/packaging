@@ -10,7 +10,7 @@ export PACKAGES=/var/vcap/packages
 
 addBuildTool(){
   export PATH=$PACKAGES/$1/bin:$PATH
-  export AL_OPTS="${AL_OPTS} -I${PACKAGES}/$1"
+  export ACLOCAL_PATH="${PACKAGES}/$1/share/aclocal:${ACLOCAL_PATH}"
 }
 
 addLib(){
@@ -32,7 +32,6 @@ setDeps() {
   addLib pcre
 
   export LD_LIBRARY_PATH="${PACKAGES}/jemalloc/lib:${LD_LIBRARY_PATH}"
-  export ACLOCAL_PATH="${PACKAGES}/pkg-config/share/aclocal"
 }
 
 source /var/vcap/packages/python-2.7/bosh/compile.env
