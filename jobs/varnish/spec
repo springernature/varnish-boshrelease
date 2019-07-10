@@ -4,6 +4,7 @@ name: varnish
 templates:
   bpm.yml: config/bpm.yml
   default.vcl.erb: etc/default.vcl
+  drain.erb: bin/drain
   pre-start: bin/pre-start
   varnish_wrapper.erb: bin/varnish_wrapper
 
@@ -48,3 +49,8 @@ properties:
           value: 0
         - name: nuke_limit
           value: 500
+  drain_script:
+    description: "A placeholder to add a custom drain script"
+    default: |
+      #!/bin/bash
+      echo 0
