@@ -21,6 +21,11 @@ properties:
   listen_address:
     description: "Defines what address Varnish should listen to, and service HTTP requests from."
     default: ":80"
+  management_interface:
+    description: "Offers a management interface on the specified address and port. To disable the management interface use 'none'."
+    default: none
+    example:
+      management_interface: "localhost:6082"
   vcl_configuration:
     description: "Content of VCL configuration file"
     default: []
