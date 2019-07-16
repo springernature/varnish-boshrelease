@@ -9,6 +9,8 @@ templates:
   varnish_wrapper.erb: bin/varnish_wrapper
 
 packages:
+  - libedit
+  - ncurses
   - varnish
 
 provides:
