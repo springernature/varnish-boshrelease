@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+PCRE_VERSION=8.43
+
 VARNISH_VERSION=6.0.3
 VARNISH_MODULES_VERSION=0.15.0
 
@@ -39,6 +41,15 @@ pip install docutils sphinx==1.8.5
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
 
+echo "Extracting pcre"
+tar xzf pcre/pcre-${PCRE_VERSION}.tgz
+pushd pcre-${PCRE_VERSION}
+  ./configure "--prefix=${BOSH_INSTALL_TARGET}"
+  make
+  make install "prefix=${BOSH_INSTALL_TARGET}"
+popd
+
+echo "Extracting varnish"
 tar xzf varnish/varnish-${VARNISH_VERSION}.tgz
 pushd varnish-${VARNISH_VERSION}
   setDeps
@@ -48,6 +59,7 @@ pushd varnish-${VARNISH_VERSION}
   make install
 popd
 
+echo "Extracting varnish modules"
 tar xzf varnish/varnish-modules-${VARNISH_MODULES_VERSION}.tar.gz
 pushd varnish-modules-${VARNISH_MODULES_VERSION}
   setDeps

@@ -13,5 +13,6 @@ dependencies:
 - python-2.7
 
 files:
+- varnish/pcre-8.43.tar.gz
 - varnish/varnish-6.0.3.tgz
 - varnish/varnish-modules-0.15.0.tar.gz

@@ -1,7 +1,0 @@
----
-name: pcre
-
-dependencies: []
-
-files:
-- pcre/pcre-8.43.tar.gz
