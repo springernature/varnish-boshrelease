@@ -30,6 +30,7 @@ setDeps() {
 
   addLib libedit
   addLib ncurses
+  addLib varnish
 
   export LD_LIBRARY_PATH="${PACKAGES}/jemalloc/lib:${LD_LIBRARY_PATH}"
 }
@@ -40,7 +41,7 @@ pip install docutils sphinx==1.8.5
 mkdir ${BOSH_INSTALL_TARGET}/bin
 
 echo "Extracting jemalloc"
-tar xjf "jemalloc/jemalloc-${JEMALLOC_VERSION}.tar.bz2"
+tar xjf "varnish/jemalloc-${JEMALLOC_VERSION}.tar.bz2"
 pushd jemalloc-${JEMALLOC_VERSION}
   ./configure "--prefix=${BOSH_INSTALL_TARGET}"
   make
@@ -48,7 +49,7 @@ pushd jemalloc-${JEMALLOC_VERSION}
 popd
 
 echo "Extracting pcre"
-tar xzf pcre/pcre-${PCRE_VERSION}.tgz
+tar xzf varnish/pcre-${PCRE_VERSION}.tar.gz
 pushd pcre-${PCRE_VERSION}
   ./configure "--prefix=${BOSH_INSTALL_TARGET}"
   make
