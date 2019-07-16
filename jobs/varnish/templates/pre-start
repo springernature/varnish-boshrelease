@@ -1,6 +1,3 @@
 #!/bin/sh
 
-echo /var/vcap/packages/jemalloc/lib > /etc/ld.so.conf.d/jemalloc.conf
-ldconfig
-
 sudo -u vcap mkdir -p /var/vcap/data/varnish/workdir/varnish
