@@ -31,8 +31,6 @@ setDeps() {
   addLib libedit
   addLib ncurses
   addLib varnish
-
-  export LD_LIBRARY_PATH="${PACKAGES}/jemalloc/lib:${LD_LIBRARY_PATH}"
 }
 
 source /var/vcap/packages/python-2.7/bosh/compile.env
