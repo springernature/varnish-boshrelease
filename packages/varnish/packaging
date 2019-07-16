@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+JEMALLOC_VERSION=5.2.0
 PCRE_VERSION=8.43
-
 VARNISH_VERSION=6.0.3
 VARNISH_MODULES_VERSION=0.15.0
 
@@ -28,10 +28,8 @@ setDeps() {
   addBuildTool libtool
   addBuildTool pkg-config
 
-  addLib jemalloc
   addLib libedit
   addLib ncurses
-  addLib pcre
 
   export LD_LIBRARY_PATH="${PACKAGES}/jemalloc/lib:${LD_LIBRARY_PATH}"
 }
@@ -40,6 +38,14 @@ source /var/vcap/packages/python-2.7/bosh/compile.env
 pip install docutils sphinx==1.8.5
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
+
+echo "Extracting jemalloc"
+tar xjf "jemalloc/jemalloc-${JEMALLOC_VERSION}.tar.bz2"
+pushd jemalloc-${JEMALLOC_VERSION}
+  ./configure "--prefix=${BOSH_INSTALL_TARGET}"
+  make
+  make install "prefix=${BOSH_INSTALL_TARGET}"
+popd
 
 echo "Extracting pcre"
 tar xzf pcre/pcre-${PCRE_VERSION}.tgz

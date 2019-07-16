@@ -1,7 +1,0 @@
----
-name: jemalloc
-
-dependencies: []
-
-files:
-- jemalloc/jemalloc-5.2.0.tar.bz2
