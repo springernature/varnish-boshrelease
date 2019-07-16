@@ -74,3 +74,5 @@ pushd varnish-modules-${VARNISH_MODULES_VERSION}
   make
   make install
 popd
+
+cp -d ${PACKAGES}/libedit/lib/libedit.so* ${BOSH_INSTALL_TARGET}/lib
