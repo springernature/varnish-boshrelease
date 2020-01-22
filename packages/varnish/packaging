@@ -75,4 +75,5 @@ pushd varnish-modules-${VARNISH_MODULES_VERSION}
   make install
 popd
 
+# Copy libedit libs instead of installing the package
 cp -d ${PACKAGES}/libedit/lib/libedit.so* ${BOSH_INSTALL_TARGET}/lib
