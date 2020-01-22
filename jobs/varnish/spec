@@ -9,8 +9,7 @@ templates:
   varnish_wrapper.erb: bin/varnish_wrapper
 
 packages:
-  - jemalloc
-  - pcre
+  - ncurses
   - varnish
 
 provides:
