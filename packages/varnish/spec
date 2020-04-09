@@ -8,9 +8,9 @@ dependencies:
 - libtool
 - ncurses
 - pkg-config
-- python-2.7
 
 files:
+- varnish/get-pip-20.0.2.py
 - varnish/jemalloc-5.2.0.tar.bz2
 - varnish/pcre-8.43.tar.gz
 - varnish/varnish-6.0.6.tgz

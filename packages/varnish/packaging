@@ -3,6 +3,7 @@ set -e
 
 JEMALLOC_VERSION=5.2.0
 PCRE_VERSION=8.43
+PIP_VERSION=20.0.2
 VARNISH_VERSION=6.0.6
 VARNISH_MODULES_VERSION=0.15.0
 
@@ -33,8 +34,8 @@ setDeps() {
   addLib varnish
 }
 
-source /var/vcap/packages/python-2.7/bosh/compile.env
-pip install docutils sphinx==1.8.5
+python3 varnish/get-pip-${PIP_VERSION}.py
+pip install docutils sphinx
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
 
