@@ -20,8 +20,8 @@ pkg-config/pkg-config-0.29.tar.gz:
   size: 1973875
   sha: sha256:c8507705d2a10c67f385d66ca2aae31e81770cc0734b4191eb8c489e864a006b
 varnish/get-pip-21.1.1.py:
-  size: 1937346
-  sha: sha256:f499d76e0149a673fb8246d88e116db589afbd291739bd84f2cd9a7bca7b6993
+  size: 1908223
+  sha: sha256:311afebb7cdd310eb3a3a6bb6fffef53d84493db98c7cebf4008a18d3418c8be
 varnish/jemalloc-5.2.0.tar.bz2:
   size: 543892
   sha: 5a5255f7bca3e79a063f26f292cf93f17fe3b14f
