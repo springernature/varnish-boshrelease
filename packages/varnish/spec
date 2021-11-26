@@ -13,5 +13,5 @@ files:
 - varnish/get-pip-21.1.1.py
 - varnish/jemalloc-5.2.0.tar.bz2
 - varnish/pcre-8.43.tar.gz
-- varnish/varnish-6.0.7.tgz
+- varnish/varnish-6.0.9.tgz
 - varnish/varnish-modules-0.15.1.tar.gz

@@ -28,9 +28,9 @@ varnish/jemalloc-5.2.0.tar.bz2:
 varnish/pcre-8.43.tar.gz:
   size: 2085854
   sha: sha256:0b8e7465dc5e98c757cc3650a20a7843ee4c3edf50aaf60bb33fd879690d2c73
-varnish/varnish-6.0.7.tgz:
-  size: 3153205
-  sha: sha256:4ad08f72289fe1f1157186b04622ecebc535cc238dd4262123cc82c16e375a5a
+varnish/varnish-6.0.9.tgz:
+  size: 3156282
+  sha: sha256:507314583834abc0a733813d99a7b90613cb531708486e9e32b0033699e717bc
 varnish/varnish-modules-0.15.1.tar.gz:
   size: 67171
   sha: sha256:755eb698713379d8b038b005da7643ec76a18d1ed1e08989cf416a746b966fe3
