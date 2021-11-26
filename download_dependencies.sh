@@ -3,7 +3,7 @@
 wget https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.gz
 wget https://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.gz
 wget https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.gz
-wget https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
+wget https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.tar.gz
 wget https://ftp.pcre.org/pub/pcre/pcre-8.43.tar.gz
 wget https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.1.tar.gz
 wget http://thrysoee.dk/editline/libedit-20190324-3.1.tar.gz
