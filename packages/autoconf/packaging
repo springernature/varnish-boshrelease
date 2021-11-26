@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-version="2.69"
+version="2.71"
 
 tar xzf "autoconf/autoconf-${version}.tar.gz"
 
