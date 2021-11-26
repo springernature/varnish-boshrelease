@@ -1,7 +1,7 @@
 #!/bin/sh
 
-bosh add-blob autoconf-2.71.tar.gz autoconf/autoconf-2.71.tar.gz
-bosh add-blob automake-1.16.5.tar.gz automake/automake-1.16.5.tar.gz
+bosh add-blob autoconf-2.69.tar.gz autoconf/autoconf-2.69.tar.gz
+bosh add-blob automake-1.15.tar.gz autoconf/automake-1.15.tar.gz
 bosh add-blob libtool-2.4.6.tar.gz libtool/libtool-2.4.6.tar.gz
 bosh add-blob pkg-config-0.29.tar.gz pkg-config/pkg-config-0.29.tar.gz
 bosh add-blob ncurses-6.1.tar.gz ncurses/ncurses-6.1.tar.gz
