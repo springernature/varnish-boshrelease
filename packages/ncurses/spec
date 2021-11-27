@@ -4,4 +4,4 @@ name: ncurses
 dependencies: []
 
 files:
-- ncurses/ncurses-6.1.tar.gz
+- ncurses/ncurses-6.3.tar.gz

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-version="6.1"
+version="6.3"
 
 tar xzf "ncurses/ncurses-${version}.tar.gz"
 
