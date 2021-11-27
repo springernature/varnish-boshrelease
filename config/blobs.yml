@@ -16,7 +16,7 @@ ncurses/ncurses-6.3.tar.gz:
 pkg-config/pkg-config-0.29.2.tar.gz:
   size: 2016830
   sha: sha256:6fc69c01688c9458a57eb9a1664c9aba372ccda420a02bf4429fe610e7e7d591
-varnish/get-pip-21.1.1.py:
+varnish/get-pip-20.3.4.py:
   size: 1908223
   sha: sha256:311afebb7cdd310eb3a3a6bb6fffef53d84493db98c7cebf4008a18d3418c8be
 varnish/jemalloc-5.2.1.tar.bz2:
