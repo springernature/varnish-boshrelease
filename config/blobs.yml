@@ -4,9 +4,9 @@ autoconf/autoconf-2.69.tar.gz:
 automake/automake-1.15.1.tar.gz:
   size: 2265200
   sha: sha256:988e32527abe052307d21c8ca000aa238b914df363a617e38f4fb89f5abf6260
-libedit/libedit-20190324-3.1.tar.gz:
-  size: 521999
-  sha: sha256:ac8f0f51c1cf65492e4d1e3ed2be360bda41e54633444666422fbf393bba1bae
+libedit/libedit-20210910-3.1.tar.gz:
+  size: 524722
+  sha: sha256:6792a6a992050762edcca28ff3318cdb7de37dccf7bc30db59fcd7017eed13c5
 libtool/libtool-2.4.6.tar.gz:
   size: 1806697
   sha: sha256:e3bd4d5d3d025a36c21dd6af7ea818a2afcd4dfc1ea5a17b39d7854bcd0c06e3

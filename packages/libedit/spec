@@ -4,4 +4,4 @@ name: libedit
 dependencies: []
 
 files:
-- libedit/libedit-20190324-3.1.tar.gz
+- libedit/libedit-20210910-3.1.tar.gz
