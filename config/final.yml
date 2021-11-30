@@ -1,7 +1,7 @@
 ---
 blobstore:
-  provider: local
+  provider: gcs
   options:
-    blobstore_path: /tmp/varnish-boshrelease
+    bucket_name: varnish-boshrelease
 
 final_name: varnish
