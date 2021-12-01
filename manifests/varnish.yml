@@ -1,3 +1,4 @@
+# Sample BOSH manifest for deploying a Varnish HTTP cache server
 ---
 name: varnish
 
