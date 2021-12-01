@@ -1,12 +1,24 @@
-# Sample BOSH manifest for deploying a Varnish HTTP cache server
 ---
+# Sample BOSH manifest for deploying a Varnish HTTP cache server
 name: varnish
 
-addons:
+releases:
 - name: bpm
-  jobs:
-  - name: bpm
-    release: bpm
+  version: latest
+- name: varnish
+  version: latest
+
+stemcells:
+- alias: default
+  os: ubuntu-bionic
+  version: latest
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
+  serial: false
 
 instance_groups:
 - name: varnish
@@ -26,7 +38,6 @@ instance_groups:
           .host = "www.example.org";
           .port = "80";
         }
-
       parameters:
       - name: default_ttl
         value: 0
@@ -36,20 +47,8 @@ instance_groups:
       - type: malloc
         options: 1G
 
-update:
-  canaries: 1
-  max_in_flight: 1
-  canary_watch_time: 1000-30000
-  update_watch_time: 1000-30000
-  serial: false
-
-stemcells:
-  - alias: default
-    os: ubuntu-bionic
-    version: latest
-
-releases:
+addons:
 - name: bpm
-  version: latest
-- name: varnish
-  version: latest
+  jobs:
+  - name: bpm
+    release: bpm
