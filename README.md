@@ -12,3 +12,12 @@ To deploy a Varnish instance using the provided example manifest, run the follow
 ```
 bosh -e <env> -d varnish deploy manifests/varnish.yml
 ```
+
+A more advanced example can be found in the `manifests/varnish-with-haproxy`:
+
+```
+bosh -e <env> -d varnish-haproxy-test deploy manifests/varnish-with-haproxy.yml
+```
+
+Here, Varnish is fronted by HAProxy for TLS termination and consistent hashing.
+It includes a custom drain script that combined with a some VCL logic and a health check in HAProxy ensures a graceful shutdown of the Varnish instances (no lost requests or error responses).

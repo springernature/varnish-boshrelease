@@ -1,0 +1,129 @@
+---
+# Sample BOSH manifest for deploying Varnish fronted by HAProxy
+# Features custom drain script, consistent hashing etc.
+name: varnish-haproxy-test
+
+releases:
+- name: bpm
+  version: latest
+- name: varnish
+  version: latest
+- name: haproxy
+  version: latest
+
+stemcells:
+- alias: default
+  os: ubuntu-bionic
+  version: latest
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  canary_watch_time: 30000-120000
+  update_watch_time: 5000-120000
+
+instance_groups:
+- name: varnish
+  instances: 2
+  stemcell: default
+  azs: [z1,z2,z3]
+  vm_type: default
+  networks:
+  - name: default
+  jobs:
+  - name: varnish
+    release: varnish
+    provides:
+      http_accelerator: {as: varnish_backend}
+    properties:
+      drain_script: |-
+        #!/bin/bash
+        set -e
+        logfile=/var/vcap/sys/log/varnish/drain.log
+        mkdir -p "$(dirname ${logfile})"
+        echo "Disable Varnish node" >> ${logfile}
+        curl -s -X DISABLE 127.0.0.1 >> ${logfile} || true
+        echo 60
+      management_interface: "localhost:6082"
+      parameters:
+      - name: default_ttl
+        value: 0
+      - name:  first_byte_timeout
+        value: 60
+      - name:  backend_idle_timeout
+        value: 61
+      storage:
+      - type: malloc
+        options: 1G
+      vcl_configuration: |-
+        vcl 4.1;
+        import std;
+        import var;
+
+        backend default {
+            .host = "www.example.org";
+            .port = "80";
+        }
+
+        sub vcl_recv {
+
+            # This response is used by Haproxy as http health check
+            if (req.http.host == "healthcheck") {
+                if (var.global_get("node_disabled") == "yes") {
+                    return (synth(404, "Node is disabled"));
+                } else {
+                    return (synth(200, "Ok"));
+                }
+            }
+            # Only allow the node to be disabled from localhost (drain script)
+            if (client.ip == "127.0.0.1" && req.method == "DISABLE") {
+                var.global_set("node_disabled", "yes");
+                std.syslog(9, "Node disabled");
+                return (synth(200, "Node disabled"));
+            }
+        }
+
+- name: haproxy
+  instances: 2
+  stemcell: default
+  azs: [z1,z2,z3]
+  vm_type: default
+  networks:
+  - name: default
+  jobs:
+  - name: haproxy
+    release: haproxy
+    consumes:
+      http_backend: {from: varnish_backend}
+    properties:
+      ha_proxy:
+        backend_config: |-
+          http-request set-header X-LB %[req.hdr(Host),lower]%[capture.req.uri]
+          balance hdr(X-LB)
+          hash-type consistent
+          retries 9
+          option redispatch 3
+          option httpchk GET / "HTTP/1.0\r\nHost: healthcheck"
+          http-check disable-on-404
+          option http-keep-alive
+          hash-balance-factor 150
+        # crt_list:
+        # - ssl_pem:
+        #     cert_chain: ((www_example_org.certificate))
+        #     private_key: ((www_example_org.private_key))
+        drain_enable: true
+        drain_frontend_grace_time: 65
+        drain_timeout: 65
+        enable_health_check_http: true
+        frontend_config : |-
+          http-response set-header Connection close if { stopping }
+        log_level: err
+        resolvers:
+        - bosh-dns: 169.254.0.2
+        server_timeout: 61
+
+addons:
+- name: bpm
+  jobs:
+  - name: bpm
+    release: bpm
