@@ -1,44 +1,44 @@
 autoconf/autoconf-2.69.tar.gz:
   size: 1927468
-  object_id: b106761d-f039-4382-5f9b-e9daa2e5cb4c
+  object_id: 8f96b6c6-0670-4d4a-5f0f-1406507c1e5e
   sha: sha256:954bd69b391edc12d6a4a51a2dd1476543da5c6bbf05a95b59dc0dd6fd4c2969
 automake/automake-1.15.1.tar.gz:
   size: 2265200
-  object_id: cceb2cdd-c31a-48c9-40a5-ef6eb8b1871d
+  object_id: 911be42b-cb7d-4c5d-62d8-cff409fe0766
   sha: sha256:988e32527abe052307d21c8ca000aa238b914df363a617e38f4fb89f5abf6260
 libedit/libedit-20210910-3.1.tar.gz:
   size: 524722
-  object_id: 47c6ae25-ce3a-4269-6298-d63d4cde525d
+  object_id: 971f9302-0ad8-4cab-4bd8-91a36af5d8d4
   sha: sha256:6792a6a992050762edcca28ff3318cdb7de37dccf7bc30db59fcd7017eed13c5
 libtool/libtool-2.4.6.tar.gz:
   size: 1806697
-  object_id: b27702d8-1a99-4acc-6550-9c2788ba06ce
+  object_id: b7863be7-b849-4aa6-4645-ed6c59e9d56b
   sha: sha256:e3bd4d5d3d025a36c21dd6af7ea818a2afcd4dfc1ea5a17b39d7854bcd0c06e3
 ncurses/ncurses-6.3.tar.gz:
   size: 3583550
-  object_id: 10a2e5de-7df9-489b-65fe-9557b1b5f9fb
+  object_id: c8c7697e-43c9-47d3-45e9-b0e4cb2a200e
   sha: sha256:97fc51ac2b085d4cde31ef4d2c3122c21abc217e9090a43a30fc5ec21684e059
 pkg-config/pkg-config-0.29.2.tar.gz:
   size: 2016830
-  object_id: b74af6c7-0762-499b-557a-8dde39b9b606
+  object_id: fb32b1df-cfa2-4f99-5c18-17039ac56667
   sha: sha256:6fc69c01688c9458a57eb9a1664c9aba372ccda420a02bf4429fe610e7e7d591
 varnish/get-pip-20.3.4.py:
   size: 1908223
-  object_id: cb51f88d-a3e9-4523-5686-0db3ff57374e
+  object_id: 1c6c3f51-804a-4ba4-6c12-3717cad87080
   sha: sha256:311afebb7cdd310eb3a3a6bb6fffef53d84493db98c7cebf4008a18d3418c8be
 varnish/jemalloc-5.2.1.tar.bz2:
   size: 554279
-  object_id: 0bd47053-3647-4484-559d-90091f55a2a8
+  object_id: 8066f919-9929-4c95-562b-a125bd490894
   sha: sha256:34330e5ce276099e2e8950d9335db5a875689a4c6a56751ef3b1d8c537f887f6
 varnish/pcre-8.45.tar.gz:
   size: 2096552
-  object_id: ae25ebe6-1a03-4d34-74f0-82d7bc666f31
+  object_id: b4ab49f8-b864-472a-67db-361b38b8fb3f
   sha: sha256:4e6ce03e0336e8b4a3d6c2b70b1c5e18590a5673a98186da90d4f33c23defc09
 varnish/varnish-6.0.9.tgz:
   size: 3156282
-  object_id: e020582b-1c66-4610-5e2e-604e9839591b
+  object_id: d9dacde0-0853-4621-5cf4-88f2c7c4a70b
   sha: sha256:507314583834abc0a733813d99a7b90613cb531708486e9e32b0033699e717bc
 varnish/varnish-modules-0.15.1.tar.gz:
   size: 67171
-  object_id: 99ce85f7-36c9-48f8-6a5b-34542e76fd0f
+  object_id: 8abc5d24-07ed-4cde-4e0e-35fb7ab839d3
   sha: sha256:755eb698713379d8b038b005da7643ec76a18d1ed1e08989cf416a746b966fe3
