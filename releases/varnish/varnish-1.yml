@@ -1,0 +1,59 @@
+name: varnish
+version: "1"
+commit_hash: d899f1d
+uncommitted_changes: false
+jobs:
+- name: varnish
+  version: 3f8122a8e6bc9265e7296ded17bfce451c131e5771b97cca227dab1556dcc0a4
+  fingerprint: 3f8122a8e6bc9265e7296ded17bfce451c131e5771b97cca227dab1556dcc0a4
+  sha1: sha256:9c9860c9e5dfa843272a85d59ec888f3e07b2cde560f2c04c25c0b0a28cb0acd
+  packages:
+  - ncurses
+  - varnish
+packages:
+- name: autoconf
+  version: 72f6018683a42677273491968274851f48195dd88c45dd854da29ebc7bcf3c80
+  fingerprint: 72f6018683a42677273491968274851f48195dd88c45dd854da29ebc7bcf3c80
+  sha1: sha256:b72cfad9cbc35c6e2709d542ab402547aa79c3a7d84b520347afb311a89f5516
+  dependencies: []
+- name: automake
+  version: fc5b7dbcc5fe7ed7db07610b4e8a51d82d3069c59d79836d75999e726afcc75c
+  fingerprint: fc5b7dbcc5fe7ed7db07610b4e8a51d82d3069c59d79836d75999e726afcc75c
+  sha1: sha256:2f38ad561a74562f506e898f8c4e653be79fd115a292deb3380685112347fedd
+  dependencies:
+  - autoconf
+- name: libedit
+  version: 5bd524e2f180bf31cbce919ba147eda16489b9cc617bec362f5200b705c4b549
+  fingerprint: 5bd524e2f180bf31cbce919ba147eda16489b9cc617bec362f5200b705c4b549
+  sha1: sha256:c3509f30e16df0ca4679581b7863b88ce2d99de0a43f9e2fcbff9b68c963fe60
+  dependencies: []
+- name: libtool
+  version: 166ee8ae07d32765b8203a7a4fbbfce90cb25977e2d7bb98de6968d8e0b35278
+  fingerprint: 166ee8ae07d32765b8203a7a4fbbfce90cb25977e2d7bb98de6968d8e0b35278
+  sha1: sha256:a547c74eddeefa247ce9ba350a3c51e085d303f9267abc906c186d848bb960bf
+  dependencies: []
+- name: ncurses
+  version: 9162ed965e7ed8454fc5d8780a9554dd6290dfc7681c10d789bcdcf64660b471
+  fingerprint: 9162ed965e7ed8454fc5d8780a9554dd6290dfc7681c10d789bcdcf64660b471
+  sha1: sha256:11058bdae085345ef9924beef4f2138a4e93e6afab691b117c2db5d95baea4fb
+  dependencies: []
+- name: pkg-config
+  version: c9e9ebca389a3c8328ade4942e84f2967d49bdcf640b1543c39ddbee31224509
+  fingerprint: c9e9ebca389a3c8328ade4942e84f2967d49bdcf640b1543c39ddbee31224509
+  sha1: sha256:b3565bf37aa918c617eb74076225d9819fe339b83d976f841a71e1552be6eb8f
+  dependencies: []
+- name: varnish
+  version: dca9458179c792bff4287dd9ae6ca613a2743c278e89acc98dd37cb91b72ab8a
+  fingerprint: dca9458179c792bff4287dd9ae6ca613a2743c278e89acc98dd37cb91b72ab8a
+  sha1: sha256:9600f89279a03efe6c0b9e8cbc9872a880f4f100121e925859fd671bd4ee59d3
+  dependencies:
+  - automake
+  - autoconf
+  - libedit
+  - libtool
+  - ncurses
+  - pkg-config
+license:
+  version: 87f7ac856f55a7244535cd69aad9f3ab9f3604cf6aa3ca1b4fe8d85fcc1845f0
+  fingerprint: 87f7ac856f55a7244535cd69aad9f3ab9f3604cf6aa3ca1b4fe8d85fcc1845f0
+  sha1: sha256:ba3f61ecb3bd888a0efbe77b5fa541f9aa8ccda23ee86581018043b3dee66490
