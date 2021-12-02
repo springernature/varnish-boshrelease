@@ -1,6 +1,6 @@
 name: varnish
-version: "1"
-commit_hash: d899f1d
+version: 1.0.0
+commit_hash: bfd4ae8
 uncommitted_changes: false
 jobs:
 - name: varnish
