@@ -9,5 +9,5 @@ bosh add-blob libedit-20210910-3.1.tar.gz libedit/libedit-20210910-3.1.tar.gz
 bosh add-blob get-pip-23.1.2.py varnish/get-pip-23.1.2.py
 bosh add-blob jemalloc-5.2.1.tar.bz2 varnish/jemalloc-5.2.1.tar.bz2
 bosh add-blob pcre-8.45.tar.gz varnish/pcre-8.45.tar.gz
-bosh add-blob varnish-6.0.10.tgz varnish/varnish-6.0.10.tgz
+bosh add-blob varnish-6.0.11.tgz varnish/varnish-6.0.11.tgz
 bosh add-blob varnish-modules-0.15.1.tar.gz varnish/varnish-modules-0.15.1.tar.gz
