@@ -3,7 +3,7 @@ set -e
 
 JEMALLOC_VERSION=5.2.1
 PCRE_VERSION=8.45
-PIP_VERSION=20.3.4
+PIP_VERSION=23.1.2
 VARNISH_VERSION=6.0.10
 VARNISH_MODULES_VERSION=0.15.1
 
@@ -35,7 +35,7 @@ setDeps() {
 }
 
 python3 varnish/get-pip-${PIP_VERSION}.py
-pip install docutils sphinx
+pip3 install docutils sphinx
 
 mkdir ${BOSH_INSTALL_TARGET}/bin
 

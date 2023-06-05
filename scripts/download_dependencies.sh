@@ -7,7 +7,7 @@ wget https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 wget https://ftp.exim.org/pub/pcre/pcre-8.45.tar.gz
 wget https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.3.tar.gz
 wget https://thrysoee.dk/editline/libedit-20210910-3.1.tar.gz
-wget https://bootstrap.pypa.io/pip/3.5/get-pip.py -O get-pip-20.3.4.py
+wget https://bootstrap.pypa.io/get-pip.py -O get-pip-23.1.2.py
 wget https://github.com/jemalloc/jemalloc/releases/download/5.2.1/jemalloc-5.2.1.tar.bz2
 wget https://varnish-cache.org/_downloads/b87bd1e151054fa83a4c5b4fbb85d038/varnish-6.0.10.tgz
 wget https://github.com/varnish/varnish-modules/archive/0.15.1.tar.gz -O varnish-modules-0.15.1.tar.gz
