@@ -34,10 +34,9 @@ varnish/pcre-8.45.tar.gz:
   size: 2096552
   object_id: a59f2edf-3fe0-4bfb-5868-46bea3ea21f2
   sha: sha256:4e6ce03e0336e8b4a3d6c2b70b1c5e18590a5673a98186da90d4f33c23defc09
-varnish/varnish-6.0.13.tgz:
-  size: 3245208
-  object_id: 210bda8a-9638-480c-7b4f-9db1ec76beb5
-  sha: sha256:0dca6295f9c69d47a7208598c415385c590c66863ebd42bfeb08a367b788a9ba
+varnish/varnish-6.0.14.tgz:
+  size: 3419551
+  sha: sha256:b599417f7a699edc71612b9f109f3aa2deae8ef9db7c8c993aef41de40c9ef69
 varnish/varnish-modules-0.15.1.tar.gz:
   size: 67171
   object_id: ae370b0b-6a85-40d9-6ae4-890926dd309f
