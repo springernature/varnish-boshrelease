@@ -9,5 +9,5 @@ wget https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.3.tar.gz
 wget https://thrysoee.dk/editline/libedit-20210910-3.1.tar.gz
 wget https://bootstrap.pypa.io/get-pip.py -O get-pip-23.1.2.py
 wget https://github.com/jemalloc/jemalloc/releases/download/5.3.0/jemalloc-5.3.0.tar.bz2
-wget https://varnish-cache.org/downloads/varnish-6.0.14.tgz
+wget https://varnish-cache.org/downloads/varnish-6.0.16.tgz
 wget https://github.com/varnish/varnish-modules/archive/0.15.1.tar.gz -O varnish-modules-0.15.1.tar.gz
