@@ -3,7 +3,9 @@
 This [BOSH](https://bosh.io/) release deploys a [Varnish HTTP Cache](https://varnish-cache.org/) server.
 
 Varnish is a web accelerator (caching reverse proxy) that reduces load on its backend and speeds up content delivery.
-This release was primarily designed to be integrated with [Cloud Foundry](https://www.cloudfoundry.org/) by fronting the [Gorouters](https://docs.cloudfoundry.org/concepts/cf-routing-architecture.html#ext-client). It packages the [latest released version of the Varnish 6.0 LTS branch](https://varnish-cache.org/releases/index.html).
+This release was primarily designed to be integrated with [Cloud Foundry](https://www.cloudfoundry.org/) by fronting the [Gorouters](https://docs.cloudfoundry.org/concepts/cf-routing-architecture.html#ext-client). It packages the [latest released version of the Varnish 6.0 LTS branch](https://vinyl-cache.org/releases/index.html).
+
+> **Note:** Varnish Cache has since been [renamed to Vinyl Cache](https://vinyl-cache.org/organization/on_vinyl_cache_and_varnish_cache.html). This release tracks the 6.0 LTS branch, which predates that rename.
 
 ## Usage
 
